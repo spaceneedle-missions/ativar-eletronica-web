@@ -54,7 +54,8 @@ body {
 }
 
 .logo {
-    height: 60px;
+    height: 90px;
+    width: auto;
     object-fit: contain;
 }
 
@@ -211,45 +212,18 @@ nav a:hover::after {
     font-size: 1.5rem;
 }
 
-.hero-image {
-    position: relative;
+.hero-video {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 500px;
 }
 
-.floating-card {
-    position: absolute;
-    background: var(--white);
-    border-radius: 15px;
-    padding: 30px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    animation: float 3s ease-in-out infinite;
-}
-
-.floating-card i {
-    font-size: 3rem;
-    color: var(--primary-color);
-    margin-bottom: 10px;
-}
-
-.floating-card p {
-    color: var(--text-dark);
-    font-weight: 600;
-}
-
-.card-2 {
-    top: 50px;
-    right: 0;
-    animation-delay: 1s;
-}
-
-.card-3 {
-    bottom: 50px;
-    left: 50px;
-    animation-delay: 2s;
+.hero-video video {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 @keyframes float {
@@ -640,8 +614,10 @@ nav a:hover::after {
 }
 
 .footer-logo img {
-    height: 80px;
+    height: 60px;
+    width: auto;
     margin-bottom: 15px;
+    filter: brightness(0) invert(1);
 }
 
 .footer-logo p {
@@ -754,8 +730,7 @@ nav a:hover::after {
         grid-template-columns: 1fr;
     }
 
-    .hero-image {
-        height: 300px;
+    .hero-video {
         margin-top: 40px;
     }
 
@@ -818,8 +793,8 @@ nav a:hover::after {
         text-align: center;
     }
 
-    .floating-card {
-        display: none;
+    .hero-video video {
+        max-width: 280px;
     }
 
     .about-stats {

@@ -211,6 +211,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 opacity: 0;
                 animation: fadeInUp 0.5s ease forwards;
                 animation-delay: ${delay}ms;
+                ${char === ' ' ? 'min-width: 0.3em;' : ''}
             `;
             heroText.appendChild(span);
             delay += 30;
@@ -229,6 +230,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     opacity: 0;
                     animation: fadeInUp 0.5s ease forwards;
                     animation-delay: ${delay}ms;
+                    ${char === ' ' ? 'min-width: 0.3em;' : ''}
                 `;
                 highlightContainer.appendChild(span);
                 delay += 30;
@@ -246,6 +248,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     opacity: 0;
                     animation: fadeInUp 0.5s ease forwards;
                     animation-delay: ${delay}ms;
+                    ${char === ' ' ? 'min-width: 0.3em;' : ''}
                 `;
                 heroText.appendChild(span);
                 delay += 30;
