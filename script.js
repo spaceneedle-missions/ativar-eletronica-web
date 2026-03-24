@@ -291,5 +291,23 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    const heroVideo = document.getElementById('hero-video');
+    const unmuteBtn = document.getElementById('unmute-btn');
+    if (heroVideo && unmuteBtn) {
+        unmuteBtn.addEventListener('click', function() {
+            if (heroVideo.muted) {
+                heroVideo.muted = false;
+                unmuteBtn.textContent = '🔊 Som Ativado';
+                setTimeout(() => {
+                    unmuteBtn.classList.add('hidden');
+                }, 2000);
+            } else {
+                heroVideo.muted = true;
+                unmuteBtn.textContent = '🔇 Ativar Som';
+                unmuteBtn.classList.remove('hidden');
+            }
+        });
+    }
+
     console.log('Ativar Eletrônica - Site carregado com sucesso!');
 });
